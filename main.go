@@ -12,10 +12,10 @@ func main() {
 	router := gin.New()
 	router.Use(gin.Logger())
 
-	router.Use(middleware.Authentication())
-
 	// User sign-up and log-in API
 	routes.UserRoutes(router)
+
+	router.Use(middleware.Authentication())
 
 	// User post and get todo_list API
 	routes.TodoListRoutes(router)

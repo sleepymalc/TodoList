@@ -12,7 +12,9 @@ import (
 
 //DBinstance func
 func DBinstance() *mongo.Client {
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://user:userpassword@todolist.iygiv.mongodb.net/test"))
+	var username, password string
+
+	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://" + username + ":" + password + "@todolist.iygiv.mongodb.net/test"))
 	if err != nil {
 		log.Fatal(err)
 	}
