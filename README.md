@@ -2,19 +2,23 @@
 
 ## Abstract
 
-#### 	This project is based on following elements:
+#### 		This project is based on following elements:
 
-#### 		1. Golang
+#### 				1. Golang
 
-#### 		2. Gin Framework
+#### 				2. Gin Framework
 
-#### 		3. JWT(Json Web Token)
+#### 				3. JWT(Json Web Token)
 
-#### 		4. Restful API
+#### 				4. Restful API
 
-#### 		5. Mongodb 
+#### 				5. Mongodb 
 
-#### 	To build a simple todo list project, while using Postman to test all the API functionality, and finally build on Docker.
+#### 		6. GCP(Google Cloud Platform)
+
+#### 		7. GKE(Google Kubernetes Engine)
+
+#### 		To build a simple todo list project, while using Postman to test all the API functionality. Additionally, one can build with Docker and push it to GKE and expose to the internet.
 
 ## Features
 
@@ -119,4 +123,83 @@
   "UpsertedID": null
 }
 ```
+##GCP + GKE
+
+#### 	To build a docker file, first go to `/Todo_List`, and then type in the following command:
+
+```dockerfile
+docker build -t asia.gcr.io/PROJECT_ID/todo_list .
+```
+
+#### which will generate a image of this project.
+
+
+
+#### 	To push the image to GCP, we type in the following command:
+
+```
+docker push asia.gcr.io/PROJECT_ID/todo_list
+```
+
+#### which just push the image file to your GCP project.
+
+
+
+#### 	Now, to run the project o GKE, we use:
+
+```
+kubectl run todolist --image=asia.gcr.io/PROJECT_ID/todo_list
+```
+
+#### which tells GKE to run the project.
+
+
+
+#### 	You can check if this is working by the following command:
+
+```
+kubectl get pods
+```
+
+#### this will give you the current state of your `pod`.
+
+
+
+#### 	If the state is running, now you can enter the Docker by the following command:
+
+```
+kubectl exec -it todo_list -- bash
+```
+
+
+
+#### 	Fianlly, to expose your project to Internet, use the following command:
+
+```
+kubectl expose deployment todo_list --type LoadBalancer --port 80 --target-port 80
+```
+
+#### which specifies both the exposed port in docker and the port of your localhost are 80, and also generate a loadbalancer.
+
+
+
+#### 	Now, use the following command to truely deploy the project:
+
+```
+kubectl create deployment todolist-server --image=asia.gcr.io/PROJECT_ID/todo_list
+```
+
 #### 
+
+#### 	To get the ip of your project, use the following command:
+
+```
+kubectl get service
+```
+
+#### 	To delete the service, use:
+
+```
+tubectl delete service todolist-service
+```
+
