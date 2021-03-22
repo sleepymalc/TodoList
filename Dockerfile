@@ -1,13 +1,15 @@
-FROM golang:1.14.1
+FROM golang:1.15.6
 
-WORKDIR /go/src/app
+RUN mkdir /code
 
-COPY . .
+WORKDIR /code
 
-RUN go get -u
+COPY . /code/
 
-RUN go build ./main.go
+RUN go build -o todo_list
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["./main"]
+ENTRYPOINT ["./todo_list", "-d", "-p", "8080:80" ]
+
+#CMD [  "tail -f /dev/null" ]

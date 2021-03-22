@@ -20,6 +20,6 @@ func main() {
 	// User post and get todo_list API
 	routes.TodoListRoutes(router)
 
-	port := "8080"
+	port := "80"
 	router.Run(":" + port)
 }
