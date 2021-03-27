@@ -168,9 +168,10 @@ kubectl get pods
 #### 	If the state is running, now you can enter the Docker by the following command:
 
 ```
-kubectl exec -it todo_list -- bash
+kubectl exec -it todolist -- bash
 ```
 
+#### which will let you get in the docker
 
 
 #### 	Fianlly, to expose your project to Internet, use the following command:
