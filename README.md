@@ -177,7 +177,7 @@ kubectl exec -it todolist -- bash
 #### 	Fianlly, to expose your project to Internet, use the following command:
 
 ```
-kubectl expose deployment todo_list --type LoadBalancer --port 80 --target-port 80
+kubectl expose deployment todolist-server --type LoadBalancer --port 80 --target-port 80
 ```
 
 #### which specifies both the exposed port in docker and the port of your localhost are 80, and also generate a loadbalancer.
