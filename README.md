@@ -70,7 +70,6 @@
 
 ```json
 {
-  "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyX2lkIjoiYWRtaW4iLCJleHAiOjE2MTY0NzQxNjl9.aAlh_LuxqLfWWSzCd3uA3C2RoBOTnC3HSqPaAvzYIkE",
   "todo_list": ["do homework", "write diary"]
 }
 ```
@@ -94,7 +93,6 @@
 
 ```json
 {
-  "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyX2lkIjoiYWRtaW4iLCJleHAiOjE2MTYxNzMyODZ9.8nri7jkBQPr-0ygZe5a8W2OB1K8TdmNJtc0W-XAqVkk
 }
 ```
 
@@ -115,7 +113,6 @@
 
 ```json
 {
-  "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyX2lkIjoiYWRtaW4iLCJleHAiOjE2MTYxNzMyODZ9.8nri7jkBQPr-0ygZe5a8W2OB1K8TdmNJtc0W-XAqVkk",
   "delete_element": "do homework"
 }
 ```
