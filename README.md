@@ -177,15 +177,16 @@ kubectl get pods
 #### 	If the state is running, now you can enter the Docker by the following command:
 
 ```
-kubectl exec -it todo_list -- bash
+kubectl exec -it todolist -- bash
 ```
 
+#### which will let you get in the docker
 
 
 #### 	Fianlly, to expose your project to Internet, use the following command:
 
 ```
-kubectl expose deployment todo_list --type LoadBalancer --port 80 --target-port 80
+kubectl expose deployment todolist-server --type LoadBalancer --port 80 --target-port 80
 ```
 
 #### which specifies both the exposed port in docker and the port of your localhost are 80, and also generate a loadbalancer.
