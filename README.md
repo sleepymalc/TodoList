@@ -22,7 +22,7 @@
 
 ## Features
 
-#### 	1. users/singup : Post method
+### 	1. users/singup : Post method
 
 #### 		Sample input:
 
@@ -41,7 +41,9 @@
 }
 ```
 
-#### 	2. users/login : Post method
+
+
+### 	2. users/login : Post method
 
 #### 		Sample input:
 
@@ -60,15 +62,16 @@
 }
 ```
 
-#### 	3. users/todo_list : Post method
+
+
+### 	3. users/todo_list : Post method
 
 #### 		Sample input:
 
 ```json
 {
   "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyX2lkIjoiYWRtaW4iLCJleHAiOjE2MTY0NzQxNjl9.aAlh_LuxqLfWWSzCd3uA3C2RoBOTnC3HSqPaAvzYIkE",
-  "todo_list": "do homework",
-  "todo_list": "write diary"
+  "todo_list": ["do homework", "write diary"]
 }
 ```
 
@@ -83,7 +86,9 @@
 }
 ```
 
-#### 	4. User/todo_list : Get method
+
+
+### 	4. User/todo_list : Get method
 
 #### 		Sample input:
 
@@ -102,7 +107,9 @@
 ]
 ```
 
-#### 	5. User/todo_list : Delete method
+
+
+### 	5. User/todo_list : Delete method
 
 #### 		Sample input:
 
@@ -123,6 +130,8 @@
   "UpsertedID": null
 }
 ```
+
+
 ##GCP + GKE
 
 #### 	To build a docker file, first go to `/Todo_List`, and then type in the following command:
@@ -203,3 +212,10 @@ kubectl get service
 tubectl delete service todolist-service
 ```
 
+## 
+
+## Postman
+
+### Usage
+
+#### In the repo, you can find `TodoList.postman_collection.json` and then import in the Postman.

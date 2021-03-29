@@ -11,5 +11,3 @@ RUN go build -o todo_list
 EXPOSE 80
 
 ENTRYPOINT ["./todo_list", "-d", "-p", "8080:80" ]
-
-#CMD [  "tail -f /dev/null" ]
