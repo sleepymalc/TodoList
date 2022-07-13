@@ -15,7 +15,7 @@ To build a simple todo list project, while using Postman to test all the API fun
 
 ## Features
 
-### 	users/singup : Post method
+### 	users/singup: Post method
 
 #### 		Sample input:
 
@@ -53,9 +53,7 @@ To build a simple todo list project, while using Postman to test all the API fun
 }
 ```
 
-
-
-### 	users/todo_list : Post method
+### 	users/todo_list: Post method
 
 #### 		Sample input:
 
@@ -75,10 +73,7 @@ To build a simple todo list project, while using Postman to test all the API fun
   "UpsertedID": null
 }
 ```
-
-
-
-### 	user/todo_list : Get method
+### 	user/todo_list: Get method
 
 #### 		Sample input:
 
@@ -95,10 +90,7 @@ To build a simple todo list project, while using Postman to test all the API fun
   "write diary"
 ]
 ```
-
-
-
-### 	user/todo_list : Delete method
+### 	user/todo_list: Delete method
 
 #### 		Sample input:
 
@@ -118,8 +110,6 @@ To build a simple todo list project, while using Postman to test all the API fun
   "UpsertedID": null
 }
 ```
-
-
 ## GCP + GKE
 
 To build a docker file, first go to `/Todo_List`, and then type in the following command:
