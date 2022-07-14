@@ -2,14 +2,7 @@
 
 ## Abstract
 
-This project is based on following elements:
-1. Golang
-2. Gin Framework
-3. JWT(Json Web Token)
-4. Restful API
-5. Mongodb 
-6. GCP (Google Cloud Platform)
-7. GKE (Google Kubernetes Engine)
+This project is based on following elements: Golang, Gin Framework, JWT(Json Web Token), Restful API, Mongodb, GCP (Google Cloud Platform), GKE (Google Kubernetes Engine)
 
 To build a simple todo list project, while using Postman to test all the API functionality. Additionally, one can build with Docker and push it to GKE and expose to the internet.
 
